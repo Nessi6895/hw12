@@ -10,8 +10,9 @@ public class ExecutionManagerImpl implements ExecutionManager {
 
     @Override
     public Context execute(Runnable callback, Runnable... tasks) {
-
-        return null;
+        Context context = new ContextImpl(callback, tasks);
+        context.work();
+        return context;
     }
 
 }

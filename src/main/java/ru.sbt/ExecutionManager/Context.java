@@ -11,4 +11,6 @@ public interface Context {
     void interrupt();
 
     boolean isFinished();
+
+    void work();
 }
